@@ -8,7 +8,6 @@ compose-bom = "2024.08.00"
 fragment-ktx = "1.8.2"
 appcompat = "1.7.0"
 retrofit-version = "2.9.0"
-androidx-room = "2.6.1"
 koin-version = "3.3.2"
 kotlinx-coroutine = "1.7.3"
 kotlinx-collection = "0.3.7"
@@ -33,9 +32,6 @@ fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 retrofit-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit-version" }
 retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit-version" }
-androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "androidx-room" }
-androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "androidx-room" }
-androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "androidx-room" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin-version" }
 kotlinx-coroutine = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinx-coroutine" }
 kotlinx-collection = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinx-collection" }
@@ -45,7 +41,6 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-lifecycle-runtime-compose-android = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose-android", version.ref = "lifecycle-runtime-compose-android" }
 
 [bundles]
-androidx-room = ["androidx-room-runtime", "androidx-room-ktx"]
 androidx-retrofit = ["retrofit-retrofit", "retrofit-converter-gson"]
 
 [plugins]
