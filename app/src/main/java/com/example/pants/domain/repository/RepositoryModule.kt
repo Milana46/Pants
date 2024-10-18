@@ -1,6 +1,6 @@
 package com.example.pants.domain.repository
 
-import com.example.pants.service.ColorRepositoryImpl
+import com.example.pants.data.repository.ColorRepositoryImpl
 import org.koin.core.module.dsl.bind
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module

@@ -1,4 +1,4 @@
-package com.example.pants.ui.theme
+package com.example.pants.presentation.ui
 
 import android.annotation.SuppressLint
 import android.content.res.ColorStateList

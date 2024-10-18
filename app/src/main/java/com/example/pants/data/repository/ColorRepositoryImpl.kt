@@ -1,4 +1,4 @@
-package com.example.pants.service
+package com.example.pants.data.repository
 
 import com.example.pants.domain.model.ColorModel
 import com.example.pants.data.repository.utils.generateRandomColor

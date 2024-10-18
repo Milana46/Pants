@@ -1,4 +1,4 @@
-package com.example.pants.ui.theme
+package com.example.pants.presentation.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,8 +11,8 @@ import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.Fragment
 import com.example.pants.databinding.FragmentPickerBinding
 import com.example.pants.presentation.main.SharedGameViewModel
-import com.example.pants.ui.theme.GameFragment.Companion.COLOR_NAME_ARG
-import com.example.pants.ui.theme.PantsAppTheme
+import com.example.pants.presentation.ui.GameFragment.Companion.COLOR_NAME_ARG
+import com.example.pants.presentation.ui.theme.PantsAppTheme
 import org.koin.androidx.viewmodel.ext.android.activityViewModel
 
 

@@ -1,4 +1,4 @@
-package com.example.pants.ui.theme
+package com.example.pants.presentation.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

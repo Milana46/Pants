@@ -1,4 +1,4 @@
-package com.example.pants.ui.theme
+package com.example.pants.presentation.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
