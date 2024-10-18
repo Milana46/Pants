@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.Fragment
 import com.example.pants.databinding.FragmentPickerBinding
+import com.example.pants.presentation.components.ColorPickerScreen
 import com.example.pants.presentation.main.SharedGameViewModel
 import com.example.pants.presentation.ui.GameFragment.Companion.COLOR_NAME_ARG
 import com.example.pants.presentation.ui.theme.PantsAppTheme

@@ -27,6 +27,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.toRect
 import com.example.pants.R
@@ -38,11 +39,12 @@ private const val PICKER_WIDTH = 300
 fun HuePicker(
     modifier: Modifier = Modifier,
     hue: Float,
-    animatedColor: Color,
+    //animatedColor: Color,
     onHueChange: (Float) -> Unit,
 ) {
-    onHueChange(hue)
-    val colorHue = animatedColor.hue
+
+    //val colorHue = remember(animatedColor) { animatedColor.hue }
+
     Box(
         modifier = modifier
             .height(40.dp)
@@ -68,15 +70,15 @@ fun HuePicker(
             modifier = Modifier
                 .height(40.dp)
                 .onSizeChanged { cursorWidth = it.width }
-                .then(
-                    with(LocalDensity.current) {
-                        Modifier.offset(x = ((hue / 360f) * (PICKER_WIDTH - cursorWidth.toDp().value)).dp)
-                    }
-                )
+                .offset {
+                    IntOffset(
+                        x = ((hue / 360f) * (PICKER_WIDTH.dp.toPx() - cursorWidth)).toInt(),
+                        y = 0
+                    )
+                }
         )
     }
 }
-
 private fun DrawScope.drawHueBitmap() {
     val bitmap =
         Bitmap.createBitmap(size.width.toInt(), size.height.toInt(), Bitmap.Config.ARGB_8888)
