@@ -1,4 +1,4 @@
-package com.example.pants.presentation.ui
+package com.example.pants.ui.theme
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -21,11 +21,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.pants.R
-import com.example.pants.domain.ColorModel
-import com.example.pants.main.SharedGameViewModel
-import com.example.pants.utils.components.PickerContent
-import com.example.pants.utils.components.SaveButton
-import com.example.pants.utils.hue
+import com.example.pants.domain.model.ColorModel
+import com.example.pants.presentation.main.SharedGameViewModel
+import com.example.pants.presentation.components.PickerContent
+import com.example.pants.presentation.components.SaveButton
+import com.example.pants.domain.model.hue
 
 
 @Composable

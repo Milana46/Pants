@@ -1,4 +1,4 @@
-package com.example.pants.presentation.ui
+package com.example.pants.ui.theme
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.pants.R
 import com.example.pants.databinding.FragmentGameBinding
-import com.example.pants.utils.extension.collectFlow
-import com.example.pants.utils.extension.setColoredText
-import com.example.pants.utils.extension.showErrorDialog
-import com.example.pants.utils.extension.showToast
-import com.example.pants.main.SharedGameViewModel
+import com.example.pants.presentation.utils.extension.collectFlow
+import com.example.pants.presentation.utils.extension.setColoredText
+import com.example.pants.presentation.utils.extension.showErrorDialog
+import com.example.pants.presentation.utils.extension.showToast
+import com.example.pants.presentation.main.SharedGameViewModel
 import org.koin.androidx.viewmodel.ext.android.activityViewModel
 
 class GameFragment : Fragment() {
