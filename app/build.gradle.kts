@@ -71,5 +71,7 @@ dependencies {
     implementation(libs.androidx.monitor)
     implementation(libs.androidx.junit.ktx)
 
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9")
+
     debugImplementation(libs.ui.tooling.preview)
 }
