@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tolls="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="?android:attr/selectableItemBackground"
     android:gravity="center_vertical"
@@ -11,10 +11,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/colorCard"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:layout_weight="1"
         android:backgroundTint="@color/gray"
         app:cardCornerRadius="24dp">
 
@@ -38,7 +37,6 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_weight="1"
         android:background="?android:attr/selectableItemBackground"
         android:contentDescription="@string/move_up"
         android:src="@drawable/arrow_up" />
