@@ -15,4 +15,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Pants"
 include(":app")
- 
+include(":app:benchmark")
+include(":app:benchmarks")
+include(":app:benchmarkz")

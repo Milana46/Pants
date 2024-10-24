@@ -11,7 +11,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/colorCard"
-        android:layout_width="250dp"
+        android:layout_width="218dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:layout_weight="1"
@@ -20,7 +20,7 @@
 
         <TextView
             android:id="@+id/colorName"
-            android:layout_width="150dp"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="12dp"

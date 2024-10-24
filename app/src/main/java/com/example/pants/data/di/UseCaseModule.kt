@@ -1,7 +1,7 @@
-package com.example.pants.data.service
+package com.example.pants.data.di
 
-import com.example.pants.usecases.CheckBoardOrderUseCase
-import com.example.pants.usecases.GetColorBoardUseCase
+import com.example.pants.domain.usecases.CheckBoardOrderUseCase
+import com.example.pants.domain.usecases.GetColorBoardUseCase
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
 

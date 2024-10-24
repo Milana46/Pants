@@ -11,7 +11,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/colorCard"
-        android:layout_width="250dp"
+        android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:layout_weight="1"
@@ -20,7 +20,7 @@
 
         <TextView
             android:id="@+id/colorName"
-            android:layout_width="150dp"
+            android:layout_width="137dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="12dp"
@@ -28,6 +28,7 @@
             android:gravity="center"
             android:minHeight="40dp"
             android:textAlignment="center"
+            android:textSize="16sp"
             android:textColor="@color/main_color"
             tolls:text="Milano" />
 
