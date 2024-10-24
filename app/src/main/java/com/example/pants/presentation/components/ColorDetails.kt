@@ -40,7 +40,6 @@ internal fun ColorDetails(modifier: Modifier, color: Color) {
     }
 }
 
-
 @Composable
 internal fun DataPointPresenter(title: String, data: String) {
 
@@ -62,6 +61,3 @@ internal fun DataPointPresenter(title: String, data: String) {
         }
     }
 }
-
-
-
