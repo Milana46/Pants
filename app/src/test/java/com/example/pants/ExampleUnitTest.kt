@@ -16,14 +16,11 @@ import org.junit.Test
 import org.junit.Assert.*
 
 
-
-
 class ApiMock : ColorApiService {
     override suspend fun getColor(hsv: String): ColorResponse {
         return ColorResponse(Name("name"), Hsv(Hsv.Fraction(0.512f, 0.445f, 0.456f)))
     }
 }
-
 
 suspend fun colorRepositoryTest(repo: ColorRepository) {
     val colors = repo.getRandomColors(1024).getOrThrow()
@@ -36,18 +33,11 @@ suspend fun colorRepositoryTest(repo: ColorRepository) {
             assert(!color.name.contains(name))
         }
     }
-
 }
 
 class ExampleUnitTest {
     @Test
-     fun colorRepository()= runBlocking {
+    fun colorRepository() = runBlocking {
         launch { colorRepositoryTest(ColorRepositoryImpl(ApiMock())) }.join()
     }
-
-
-
-
 }
-
-

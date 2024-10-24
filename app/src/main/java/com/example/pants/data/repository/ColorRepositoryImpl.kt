@@ -10,8 +10,7 @@ import java.util.Locale
 
 class ColorRepositoryImpl(
     private val apiService: ColorApiService,
-
-) : ColorRepository {
+    ) : ColorRepository {
 
     override suspend fun getRandomColors(count: Int): Result<Set<ColorModel>> = runCatching {
         val colorSet = mutableSetOf<ColorModel>()
@@ -28,15 +27,13 @@ class ColorRepositoryImpl(
         colorSet.toSet()
     }
 
+
     private fun isColorValid(color: ColorModel): Boolean {
         return color.name.lowercase(Locale.getDefault()) !in COMMON_USE_NAMES
+                && color.saturation > 0.3 && color.realHue > 0.4
     }
 
 //    private fun generateRandomColorList(size: Int): List<String> {
 //        return List(size) { generateRandomColor() }
 //    }
-
-
-
-
 }
