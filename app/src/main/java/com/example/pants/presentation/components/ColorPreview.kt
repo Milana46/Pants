@@ -48,11 +48,7 @@ private fun ColorBox(animatedGradient: Brush) {
             .clip(RoundedCornerShape(16.dp))
             .background(animatedGradient)
             .onSizeChanged { width = it.width }
-            .then(
-                with(LocalDensity.current) {
-                    Modifier.height(width.toDp())
-                }
-            )
+            .height(with(LocalDensity.current) { width.toDp() })
     )
 }
 

@@ -8,6 +8,7 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.width
@@ -39,36 +40,33 @@ private const val PICKER_WIDTH = 300
 fun HuePicker(
     modifier: Modifier = Modifier,
     hue: Float,
-    //animatedColor: Color,
     onHueChange: (Float) -> Unit,
 ) {
-
-    //val colorHue = remember(animatedColor) { animatedColor.hue }
 
     Box(
         modifier = modifier
             .height(40.dp)
-            .width(PICKER_WIDTH.dp)
+            .width(300.dp)
     ) {
         Canvas(
             modifier = Modifier
-                .matchParentSize()
+                .fillMaxSize()
                 .clip(CircleShape)
                 .pointerInput(Unit) {
                     detectTapGestures { offset ->
-                        val newHue = (offset.x / size.width) * 360f
-                        onHueChange(newHue)
+                        onHueChange((offset.x / size.width) * 360f)
                     }
                 }
         ) {
             drawHueBitmap()
         }
+
         var cursorWidth by remember { mutableIntStateOf(0) }
+
         Image(
             painter = painterResource(id = R.drawable.rectangle_cursor),
             contentDescription = null,
             modifier = Modifier
-                .height(40.dp)
                 .onSizeChanged { cursorWidth = it.width }
                 .offset {
                     IntOffset(
