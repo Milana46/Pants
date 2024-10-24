@@ -8,10 +8,10 @@
 
     <TextView
         android:id="@+id/textTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:textSize="40sp"
+        android:textSize="36sp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,8 +19,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/colorsList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="309dp"
+        android:layout_height="481dp"
         android:foregroundGravity="center"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/btnCheck"
@@ -35,8 +35,8 @@
 
     <ImageView
         android:id="@+id/hseGradient"
-        android:layout_width="60dp"
-        android:layout_height="0dp"
+        android:layout_width="42dp"
+        android:layout_height="451dp"
         app:layout_constraintBottom_toBottomOf="@+id/colorsList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/colorsList"
@@ -45,7 +45,7 @@
     <Button
         android:id="@+id/btnCheck"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="54dp"
         android:layout_margin="16dp"
         android:background="@drawable/rounded_button"
         android:text="@string/next"
