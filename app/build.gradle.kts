@@ -20,12 +20,23 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        multiDexEnabled = true
+
+
+
     }
 
     buildTypes {
         release {
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+        create("benchmark") {
+            initWith(buildTypes.getByName("release"))
+            signingConfig = signingConfigs.getByName("debug")
+            matchingFallbacks += listOf("release")
+            isDebuggable = false
         }
     }
     compileOptions {
@@ -70,8 +81,10 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.androidx.monitor)
     implementation(libs.androidx.junit.ktx)
+    implementation("androidx.benchmark:benchmark-junit4:1.2.4")
 
     androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9")
+
 
     debugImplementation(libs.ui.tooling.preview)
 }

@@ -1,17 +1,19 @@
 package com.example.pants.data.repository
 
 import com.example.pants.data.mapper.toColorModel
-import com.example.pants.data.service.ColorApiService
 import com.example.pants.domain.model.ColorModel
+import com.example.pants.data.service.ColorApiService
 import com.example.pants.domain.repository.ColorRepository
-import java.util.Locale
-import kotlin.random.Random
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
+import java.util.Locale
+import kotlin.random.Random
+
 
 class ColorRepositoryImpl(
     private val apiService: ColorApiService,
+
 ) : ColorRepository {
 
     override suspend fun getRandomColors(count: Int): Result<Set<ColorModel>> = runCatching {
@@ -21,14 +23,13 @@ class ColorRepositoryImpl(
             while (colorSet.size < count) {
                 val newColorsNeeded = count - colorSet.size
 
-                // Генерируем уникальные цвета за один раз
+
                 val deferredColors = (1..newColorsNeeded).map {
                     async {
                         generateRandomColorModel()
                     }
                 }
 
-                // Обрабатываем результаты
                 deferredColors.awaitAll().forEach { color ->
                     if (isColorValid(color)) {
                         colorSet.add(color)
@@ -55,6 +56,7 @@ class ColorRepositoryImpl(
 
     private fun isColorValid(color: ColorModel): Boolean {
         return color.name.lowercase(Locale.getDefault()) !in COMMON_USE_NAMES
+                && color.saturation > 0.3 && color.realHue > 0.4
     }
 
     private companion object {
