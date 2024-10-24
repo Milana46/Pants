@@ -1,4 +1,4 @@
-package com.example.pants.usecases
+package com.example.pants.domain.usecases
 
 import com.example.pants.domain.model.ColorModel
 

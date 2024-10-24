@@ -1,5 +1,6 @@
-package com.example.pants.data.service
+package com.example.pants.data.di
 
+import com.example.pants.data.service.ColorApiService
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

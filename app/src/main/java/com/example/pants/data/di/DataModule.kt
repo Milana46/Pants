@@ -1,6 +1,5 @@
-package com.example.pants.data.service
+package com.example.pants.data.di
 
-import com.example.pants.domain.repository.productRepositoryModule
 import org.koin.dsl.module
 
 val dataModule = module {
